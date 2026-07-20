@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtherGuess | Premium Number Guessing Experience</title>
+    <meta name="description" content="Test your intuition with EtherGuess, a sleek and interactive number guessing game designed for a premium experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="game-container">
+        <header>
+            <h1>Ether<span>Guess</span></h1>
+            <p class="subtitle">Decipher the hidden frequency</p>
+        </header>
+
+        <section class="glass-card main-game">
+            <div class="range-selector">
+                <button class="range-btn active" data-range="10">1-10</button>
+                <button class="range-btn" data-range="50">1-50</button>
+                <button class="range-btn" data-range="100">1-100</button>
+            </div>
+
+            <div class="status-display">
+                <div class="feedback-msg" id="feedback">Choose your range and start guessing</div>
+                <div class="attempts-count">Attempts: <span id="attempts">0</span></div>
+            </div>
+
+            <div class="input-area">
+                <input type="number" id="guess-input" placeholder="Enter your guess..." min="1" max="100">
+                <button id="guess-btn" class="primary-btn">GUESS</button>
+            </div>
+
+            <div class="history-section">
+                <h3>Guess History</h3>
+                <div id="history-list" class="history-list">
+                    <!-- History items will be injected here -->
+                </div>
+            </div>
+
+            <div class="game-actions">
+                <button id="reset-btn" class="secondary-btn">New Game</button>
+            </div>
+        </section>
+
+        <footer class="game-footer">
+            <p>&copy; 2026 Antigravity | Premium Web Experience</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
